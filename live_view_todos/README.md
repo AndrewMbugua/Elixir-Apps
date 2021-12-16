@@ -1,4 +1,4 @@
-# LiveViewTodos
+# A Simple To-do App
 
 To start your Phoenix server:
 
@@ -19,5 +19,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ![2-tabs update](https://github.com/AndrewMbugua/Elixir-Apps/blob/master/live_view_todos/screenshots/2-tabs-update.png)
 
 
-### Including a check box,to verify whether or not it has been checked off
+### Including a check box,to verify whether or not it has been checked off.
 ![Checklist](https://github.com/AndrewMbugua/Elixir-Apps/blob/master/live_view_todos/screenshots/Checklist.png)
+
+### The End

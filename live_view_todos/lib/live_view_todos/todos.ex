@@ -5,18 +5,19 @@ defmodule LiveViewTodos.Todos do
 
   import Ecto.Query, warn: false
   alias LiveViewTodos.Repo
-
   alias LiveViewTodos.Todos.Todo
 
-  @doc """
-  Returns the list of todos.
+@topic inspect(__MODULE__)
 
-  ## Examples
+def subscribe do
+  Phoenix.PubSub.subscribe(LiveViewTodos.PubSub, @topic)
+end
 
-      iex> list_todos()
-      [%Todo{}, ...]
+defp broadcast_change({:ok,result},event)do
+  Phoenix.PubSub.broadcast(LiveViewTodos.PubSub, @topic, {__MODULE__,event,result})
+end
 
-  """
+
   def list_todos do
     Repo.all(Todo)
   end
@@ -53,6 +54,7 @@ defmodule LiveViewTodos.Todos do
     %Todo{}
     |> Todo.changeset(attrs)
     |> Repo.insert()
+    |> broadcast_change([:todo, :created]) #pass in the result on Repo.insert(),which is an {:ok, %Todo{}}
   end
 
   @doc """
@@ -71,6 +73,7 @@ defmodule LiveViewTodos.Todos do
     todo
     |> Todo.changeset(attrs)
     |> Repo.update()
+    |> broadcast_change([:todo,:updated])
   end
 
   @doc """
@@ -86,7 +89,9 @@ defmodule LiveViewTodos.Todos do
 
   """
   def delete_todo(%Todo{} = todo) do
-    Repo.delete(todo)
+    todo
+    |> Repo.delete()
+    |> broadcast_change([:todo, :deleted])
   end
 
   @doc """

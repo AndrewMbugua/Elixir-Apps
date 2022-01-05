@@ -6,7 +6,14 @@ Create a new mix project called "blogger". Add [httpoison](hexdocs.pm/httpoison)
 #### project creation & dependency adding
 ![project creation & dependency](https://github.com/AndrewMbugua/Elixir-Apps/blob/master/Exercises/Screenshots/AddingHttpoison.png)
 
-#### Fetching the Blog 
+#### Fetching the Blog
+
+```
+def fetch_blog do
+HTTPoison.get!("https://medium.com/podiihq/quick-connect-to-your-amazon-ec2-linux-instance-through-the-command-line-6c682960ef91")
+
+end
+``` 
 ![fetch_blog Function](https://github.com/AndrewMbugua/Elixir-Apps/blob/master/Exercises/Screenshots/fetch_blog_result.png)
 
 

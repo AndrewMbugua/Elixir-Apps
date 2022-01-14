@@ -16,10 +16,11 @@ Enum.map(list, &String.graphemes/1)
 end
 
 
-#Method 2 - Provide the list elements through a function
-def counter1(list1) do
+#Method 2 - Provide the list through a function
+def count(list) do
 
-Enum.map(list1, &String.length/1)
+Enum.map(list, &String.length/1)
 end
+
 
 end

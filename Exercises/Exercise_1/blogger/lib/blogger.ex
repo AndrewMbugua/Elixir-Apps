@@ -7,6 +7,9 @@ end
 
 def capitalize do
 String.upcase("cow goat sheep")
+end
+
+def cap(input) do
 
 end
 end

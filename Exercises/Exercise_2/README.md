@@ -21,6 +21,7 @@ Screenshot of output
 
 ### Exercise_1 correction
 Input: ["cow", "goat", "sheep"]
+
 Output: ["COW", "GOAT", "SHEEP"]
 
 ```

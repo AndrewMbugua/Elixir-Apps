@@ -19,9 +19,9 @@ Screenshot of output
 ![](https://github.com/AndrewMbugua/Elixir-Apps/blob/master/Exercises/Screenshots/exercise_2.png)
 
 
-## Exercise_1 correction
-## input: ["cow", "goat", "sheep"]
-## Output: ["COW", "GOAT", "SHEEP"]
+### Exercise_1 correction
+Input: ["cow", "goat", "sheep"]
+Output: ["COW", "GOAT", "SHEEP"]
 
 ```
 def capitalize(input) do

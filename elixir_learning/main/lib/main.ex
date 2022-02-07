@@ -26,8 +26,9 @@ end
 
 def reduce do
 
-  
+  #Enum.reduce([1,2,3], 10 , fn(x ,acc) -> x + acc end)
 
+  Enum.reduce(["a","b","c"], fn(x ,acc) -> x <> acc end)
 
 end
 

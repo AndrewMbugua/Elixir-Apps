@@ -18,5 +18,17 @@ Enum.map_every(list, 3 , fn(x) -> x + 1000 end)
 
 end
 
+def filter do
+
+Enum.filter([1,2,3,4], fn(x) -> rem(x,2) == 0 end)
+
+end
+
+def reduce do
+
+  
+
+
+end
 
  end

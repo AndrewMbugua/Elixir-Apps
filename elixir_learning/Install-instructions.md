@@ -1,3 +1,5 @@
+### During the vibrant-project setup I encoutered multiple errors,this md documents how I solved them
+
 ### Error 1: bash: asdf: command not found
 
 [Reference article](https://github.com/asdf-vm/asdf/issues/279#issuecomment-378815108)

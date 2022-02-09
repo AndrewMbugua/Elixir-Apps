@@ -1,7 +1,6 @@
 ### Error 1: bash: asdf: command not found
 
 Add these 2 lines to your ~/.bashrc
-
 [Reference article](https://github.com/asdf-vm/asdf/issues/279#issuecomment-378815108)
 
 . $HOME/.asdf/asdf.sh
@@ -10,8 +9,7 @@ Add these 2 lines to your ~/.bashrc
 
 
 ### Error 2: root@localhost denied error solved by:
-
-[Reference](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
+[Reference article](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
 
 $ sudo mysql
 

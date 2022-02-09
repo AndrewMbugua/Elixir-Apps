@@ -1,8 +1,8 @@
 ### Error 1: bash: asdf: command not found
 
-Add these 2 lines to your ~/.bashrc
-
 [Reference article](https://github.com/asdf-vm/asdf/issues/279#issuecomment-378815108)
+
+Add these 2 lines to your ~/.bashrc
 
 . $HOME/.asdf/asdf.sh
 

@@ -1,4 +1,4 @@
-### During the vibrant-project setup I encoutered multiple errors,this md documents how I solved them
+### During the vibrant-project setup I encountered multiple errors,this .md documents how I solved them
 
 ### Error 1: bash: asdf: command not found
 

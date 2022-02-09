@@ -17,7 +17,7 @@ Add these 2 lines to your ~/.bashrc
 ```
 $ sudo mysql
 
-mysql>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'insert_password';
+mysql>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'insert_password_set';
 ```
 
 ### Error 3: Could not start application pdf_generator & [error] `inotify-tools` is needed to run `file_system

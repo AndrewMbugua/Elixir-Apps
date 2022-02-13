@@ -39,10 +39,16 @@ key = "Hello"
 %{^key => value} = %{"Hello" => "World"}
 
 value
-
 end
 
+def control_structures do
 
+case {:ok, "Hello World"} do
+  {:ok, result} -> result
+  {:error} -> "Uh oh!"
+  _ -> "Catch all"
+end
+"Hello World"
 
-
+end
  end

@@ -32,4 +32,17 @@ def reduce do
 
 end
 
+def pin_operator do
+
+key = "Hello"
+
+%{^key => value} = %{"Hello" => "World"}
+
+value
+
+end
+
+
+
+
  end

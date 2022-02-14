@@ -3,8 +3,6 @@ defmodule Phoenix do
 
 def function do
 
-#def inc(x), do: x + 1 end
- 
 
 end
 

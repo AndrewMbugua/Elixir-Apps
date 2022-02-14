@@ -4,5 +4,8 @@
 
 filename = IO.gets("File to count the words from:") |> String.trim()
 
-file_body = File.read!(filename)
+file_body = String.split(File.read!(filename), ~r{^[\w]}) # matches everything except a word character
+
+
+
 IO.inspect (file_body)

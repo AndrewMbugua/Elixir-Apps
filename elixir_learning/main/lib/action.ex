@@ -3,10 +3,12 @@ defmodule Action do
 
 def function do
 
-#~s(Expressed by: #{3 + 0.14159}) 
-
+#~c(Expressed by: #{3 + 0.14159}) 
 #"string"  <> " " <>  "concatenation"
 
+
+
+lambda = &(&1 * &2 + &3)
 
 end
 

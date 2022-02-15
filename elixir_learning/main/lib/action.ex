@@ -3,6 +3,10 @@ defmodule Action do
 
 def function do
 
+#~s(Expressed by: #{3 + 0.14159}) 
+
+#"string"  <> " " <>  "concatenation"
+
 
 end
 

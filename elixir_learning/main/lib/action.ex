@@ -13,9 +13,21 @@ def control_flow do
 #{_, {hour,_,_}} = :calendar.local_time()
 #hour
 
-
-
 end
+
+def codewar do
+
+def number([]), do: 0
+  def number([{add, sub} | stops]) do
+    add - sub + number(stops)
+end
+end
+
+
+
+  end
+
+
 
 
 

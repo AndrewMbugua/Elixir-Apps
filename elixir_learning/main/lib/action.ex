@@ -9,10 +9,10 @@ def practise do
 end
 
 def control_flow do
-    #a = 1 #variable a is bound to 1
+# displays only hour,nested tuples
+#{_, {hour,_,_}} = :calendar.local_time()
+#hour
 
-{date,time} = :calendar.local_time()
-{year,month,day} = date
 
 
 end

@@ -1,16 +1,20 @@
 defmodule Action do
 # Contains Elixir in action book code
 
-def function do
-
+def practise do
 #~c(Expressed by: #{3 + 0.14159}) 
 #"string"  <> " " <>  "concatenation"
-
-
-
-lambda = &(&1 * &2 + &3)
+#Enum.each(1..3, &IO.puts/1)
 
 end
+
+def module_1 do
+    
+
+
+end
+
+
 
 
 end

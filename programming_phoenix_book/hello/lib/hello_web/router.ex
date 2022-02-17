@@ -9,7 +9,7 @@ defmodule HelloWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
- 
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -17,7 +17,7 @@ defmodule HelloWeb.Router do
   scope "/", HelloWeb do
     pipe_through :browser #handles house keeping
 
-    get "/hello", HelloController, :world
+    get "/hello/:name", HelloController, :world
     get "/", PageController, :index
   end
 

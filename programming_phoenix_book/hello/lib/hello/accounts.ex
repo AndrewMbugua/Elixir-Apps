@@ -1,3 +1,3 @@
-defmodule Hello. do
+defmodule Hello.Accounts do
   
 end

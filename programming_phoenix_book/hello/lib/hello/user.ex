@@ -1,4 +1,4 @@
-defmodule Hello. do
+defmodule Hello.user do
 
 
 

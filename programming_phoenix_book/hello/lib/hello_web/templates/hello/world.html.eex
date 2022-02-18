@@ -1,6 +1,7 @@
 <h1>List users: </h1>
 
-
+table>
+<%= for user <- @users do %></table>
 
 
 

@@ -1,5 +1,6 @@
 defmodule Hello.Accounts do
 alias Hello.Accounts.User
+
   def list do
 
     [

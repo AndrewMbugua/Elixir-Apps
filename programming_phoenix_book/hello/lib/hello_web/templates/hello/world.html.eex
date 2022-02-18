@@ -4,5 +4,6 @@
 <%= for user <- @users do %>
 </table>
 
+<td><%= user.id %></td>
 
 

@@ -9,4 +9,3 @@
 </table>
 
 
-lib/hello_web/templates/hello/world.html.eex:13:1: unexpected end of string, expected a closing '<% end %>'

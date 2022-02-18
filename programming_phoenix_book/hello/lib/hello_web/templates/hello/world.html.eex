@@ -3,6 +3,7 @@
 <table>
 <%= for user <- @users do %>
 <td><%= user.id %></td>
+<td><%= user.id %></td>
 
 </table>
 

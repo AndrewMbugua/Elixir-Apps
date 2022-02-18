@@ -4,7 +4,7 @@ alias  Hello.Accounts
 
 def world(conn, %{"name" => name})do
 
-  Hello.Accounts.list()
+  Accounts.list()
   render(conn, "world.html", name: name)
 
 end

@@ -5,5 +5,5 @@
 <td><%= user.id %></td>
 <td><%= user.name %></td>
 <td><%= user.username %></td>
-
+'<% end %>
 </table>

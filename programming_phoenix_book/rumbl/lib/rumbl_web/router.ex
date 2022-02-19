@@ -1,11 +1,11 @@
-defmodule HelloWeb.Router do
-  use HelloWeb, :router
+defmodule RumblWeb.Router do
+  use RumblWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {HelloWeb.LayoutView, :root}
+    plug :put_root_layout, {RumblWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,16 +14,14 @@ defmodule HelloWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloWeb do
-    pipe_through :browser #handles house keeping
+  scope "/", RumblWeb do
+    pipe_through :browser
 
-    get "/hello/:name", HelloController, :world
-    # post "/hello", HelloController, :world
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", HelloWeb do
+  # scope "/api", RumblWeb do
   #   pipe_through :api
   # end
 
@@ -40,7 +38,7 @@ defmodule HelloWeb.Router do
     scope "/" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: HelloWeb.Telemetry
+      live_dashboard "/dashboard", metrics: RumblWeb.Telemetry
     end
   end
 

@@ -1,6 +1,6 @@
 defmodule HelloWeb.HelloController do
 use HelloWeb, :controller  #prepares us to use Phoenix's controller API
-alias  Hello.Accounts
+alias Hello.Accounts
 
 def world(conn, _params)do
 

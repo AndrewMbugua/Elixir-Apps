@@ -9,8 +9,11 @@ with {:ok, first} <- Map.fetch(user, :first),
      {:ok, last} <- Map.fetch(user, :last),
       do: last <> " , "<> first
 
-
-
+def hello(names) when is_list(names) do
+     names
+    |> Enum.join(", ")
+    |> hello
+end
 
 end
 end

@@ -1,4 +1,4 @@
-defmodule Rumbl.UserController do
+defmodule RumblWeb.UserController do
 use RumblWeb, :controller
 
 alias Rumbl.Accounts

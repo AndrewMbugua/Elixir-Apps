@@ -9,7 +9,7 @@ alias Rumbl.Accounts.User
 def list_users do
 [
 
-   %User{:id => "1", :name => "Jose", :username => "JoseValim"},
+   %User{:id => "1", :name => "Jose", :username => "Josevalim"},
    %User{:id => "2", :name => "Andrew", :username => "Andy"},
    %User{:id => "3", :name => "Johnny", :username => "John"}
 ]

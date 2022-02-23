@@ -6,6 +6,7 @@ defmodule Rumbl.Application do
   use Application
 
   @impl true
+  # uses OTP to start key services
   def start(_type, _args) do
     children = [
       # Start the Ecto repository

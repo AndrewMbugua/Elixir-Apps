@@ -20,7 +20,7 @@ def get_user_by(params) do
 end
 
 def list_users do
-  Repo.all
+  Repo.all(User)
 end
 
 end

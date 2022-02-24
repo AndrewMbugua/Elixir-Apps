@@ -16,7 +16,7 @@ def get_user!(id) do
 end
 
 def get_user_by(params) do
-  Repo.get
+  Repo.get_by
   
 end
 

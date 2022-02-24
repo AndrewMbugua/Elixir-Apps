@@ -19,6 +19,8 @@ def get_user_by(params) do
   Repo.get_by(User, params)
 end
 
-def list_user
+def list_users do
+  Repo.all
+end
 
 end

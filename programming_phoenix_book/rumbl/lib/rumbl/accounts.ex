@@ -17,7 +17,6 @@ end
 
 def get_user_by(params) do
   Repo.get_by(User, params)
-  
 end
 
 end

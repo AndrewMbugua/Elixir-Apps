@@ -1,16 +1,14 @@
 defmodule School do
-
-  def is_palindrome(s) do
-    
-    reverse = String.reverse(s)
-    if reverse == is_palindrome(s) do
-    true
-
-    else
-    
-    false
-    end
-
-
+  # protects a particular field in the struct
+  @derive {Inspect, only: [:name]}
+   defstruct name: nil , roles: [:manager, :developer] 
+ 
+def module do
+  
+  
 end
+
+
+
+
 end

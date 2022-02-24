@@ -3,7 +3,7 @@ defmodule Rumbl.Accounts do
 # Now we change our accounts context to an Ecto instance
 
 alias Rumbl.Accounts.User
-alias
+alias Rumbl.Repo
 # mapping to the struct
 # we start by hardcoding,then later map to a db
 

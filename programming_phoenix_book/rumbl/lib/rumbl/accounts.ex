@@ -11,6 +11,6 @@ def get_user(id) do
   Repo.get(User,id)
 end
 
-def get
+def get_user
 
 end

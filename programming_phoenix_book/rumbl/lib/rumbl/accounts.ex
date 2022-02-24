@@ -7,6 +7,8 @@ alias Rumbl.Accounts.User
 # mapping to the struct
 # we start by hardcoding,then later map to a db
 
-def get_user(id)
+def get_user(id) do
+  
+end
 
 end

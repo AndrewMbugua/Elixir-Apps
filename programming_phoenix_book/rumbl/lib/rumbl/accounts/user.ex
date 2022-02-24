@@ -7,6 +7,5 @@ schema "users" do
   field :username, :string
 
   timestamps()
-  
 end
 end

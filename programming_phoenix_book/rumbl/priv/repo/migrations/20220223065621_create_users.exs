@@ -7,6 +7,7 @@ defmodule Rumbl.Repo.Migrations.CreateUsers do
        add :username, :string, null: false
        add :password_hash, :string
 
+       
        timestamps()
      end
 

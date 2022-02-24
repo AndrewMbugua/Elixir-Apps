@@ -8,7 +8,7 @@ alias Rumbl.Accounts.User
 # we start by hardcoding,then later map to a db
 
 def get_user(id) do
-  Repo.get(User)
+  Repo.get(User,id)
 end
 
 end

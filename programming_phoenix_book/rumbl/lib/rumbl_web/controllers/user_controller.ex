@@ -2,6 +2,7 @@ defmodule RumblWeb.UserController do
 use RumblWeb, :controller
 
 alias Rumbl.Accounts
+alias Rumbl.Accounts.User
 
 #a new user account for our template
 #We use changeset to build a customizable strategy

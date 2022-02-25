@@ -3,6 +3,14 @@ use RumblWeb, :controller
 
 alias Rumbl.Accounts
 
+#a new user account for our template
+#We use changeset to build a customizable strategy
+def new(conn, _params)do
+    changeset = Accounts.change_user(%User{})
+    render(conn, "new.html", changeset: changeset)
+end
+
+
 def index(conn, _params) do
 users = Accounts.list_users()
 render(conn, "index.html", users: users)

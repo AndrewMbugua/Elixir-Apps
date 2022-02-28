@@ -3,6 +3,7 @@
 <div>
 <%= text_input f, :name, placeholder: "Name"%>
 </div>
+
 <%= text_input f, :username, placeholder: "Username"%>
 </div>
 <%= submit "Create User" %>

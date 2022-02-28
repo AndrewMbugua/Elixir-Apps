@@ -5,7 +5,13 @@ defmodule Rumbl.Accounts do
 alias Rumbl.Accounts.User
 alias Rumbl.Repo
 # mapping to the struct
-# we start by hardcoding,then later map to a db
+# we started by hardcoding,then later map to a db
+# Now using D.B repo
+def create_user(attrs \\ %{})do
+  %User{}
+  |> User.changeset(attrs)
+  |> Repo.insert()
+end
 
 def get_user(id) do
   Repo.get(User,id)

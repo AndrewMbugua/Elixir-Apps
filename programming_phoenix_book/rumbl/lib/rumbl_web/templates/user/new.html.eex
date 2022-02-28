@@ -4,6 +4,7 @@
 <%= text_input f, :name, placeholder: "Name"%>
 </div>
 
+<div>
 <%= text_input f, :username, placeholder: "Username"%>
 </div>
 <%= submit "Create User" %>

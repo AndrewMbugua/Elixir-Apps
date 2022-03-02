@@ -25,11 +25,15 @@ def show(conn, %{"id" => id}) do
 end
 
 def create(conn, %{"user" => user_params}) do
-    {:ok, user} = Accounts.create_user(user_params)
+    case Accounts.create_user(user_params)do
+      {:ok, user} ->
 
     conn
-    |> put_flash(:info, "#{user.name} created!")
+    |> put_flash(:info, "#{user.name} created!") # flashes a notification when correct details are put
     |> redirect(to: Routes.user_path(conn, :index))
-end
 
+    {:error, %Ecto.Changeset{} = changeset} ->
+        render(conn, "new.html", changeset: changeset)
+end
+end
 end

@@ -5,6 +5,9 @@ import Ecto.Changeset
 schema "users" do
   field :name, :string
   field :username, :string
+  # virtual schema fields in Ecto only exists in the struct,not the db
+  field :password, :string, virtual: true
+  field :password_hash, :string
 
   timestamps()
 end
@@ -15,6 +18,27 @@ def changeset(user, attrs)do
   |> validate_required([:name, :username])
   |> validate_length(:username, min: 1, max: 20)
 end
+
+defp put_pass_hash(changeset) do
+case changeset do
+  %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->
+    put_change(changeset, :password_hash, Pbkdf2.hash_pwd_salt(pass))
+    _ ->
+      changeset
+    end
+end
+
+
+def registration_changset(user, params) do
+  user
+  |> changeset(params)
+  |> cast(params, [:password])
+  |> validate_required([:password])
+  |> validate_required(:password, min: 6, max: 100)
+  |> put_pass_hash()
+end
+
+
 
 
 

@@ -11,6 +11,7 @@
 2. Database to store details.
 
 
+home controller
 
 
 To start your Phoenix server:

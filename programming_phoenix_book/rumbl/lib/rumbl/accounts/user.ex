@@ -29,7 +29,7 @@ case changeset do
 end
 
 
-def registration_changset(user, params) do
+def registration_changeset(user, params) do
   user
   |> changeset(params)
   |> cast(params, [:password])
@@ -37,8 +37,6 @@ def registration_changset(user, params) do
   |> validate_required(:password, min: 6, max: 100)
   |> put_pass_hash()
 end
-
-
 
 
 

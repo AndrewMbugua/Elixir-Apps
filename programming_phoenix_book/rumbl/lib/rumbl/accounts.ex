@@ -7,6 +7,17 @@ alias Rumbl.Repo
 # mapping to the struct
 # we started by hardcoding,then later map to a db
 # Now using D.B repo
+
+def change_registration(%User{} = user, params) do
+  User.registration_changeset(user, params)
+end
+
+def register_user(attrs \\ %{}) do
+  %User{}
+|> User.registration_changeset(attrs)
+|> Repo.insert()
+end
+
 def create_user(attrs \\ %{})do
   %User{}
   |> User.changeset(attrs)

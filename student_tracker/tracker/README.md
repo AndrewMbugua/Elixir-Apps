@@ -1,4 +1,17 @@
-# Tracker
+# Student Tracker
+
+### A Phoenix application to keep track of a student's details:
+ 1. Full names.
+ 2. Admission number
+ 3. Date of joining.
+
+#### Components
+
+1. Form to collect details.
+2. Database to store details.
+
+
+
 
 To start your Phoenix server:
 
@@ -8,12 +21,3 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix

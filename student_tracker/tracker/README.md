@@ -2,7 +2,7 @@
 
 ### A Phoenix application to keep track of a student's details:
  1. Full names.
- 2. Admission number
+ 2. Admission number.
  3. Date of joining.
 
 #### Components

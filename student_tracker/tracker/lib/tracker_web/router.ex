@@ -16,7 +16,7 @@ defmodule TrackerWeb.Router do
 
   scope "/", TrackerWeb do
     pipe_through :browser
-    
+    get "/new", NewController, :new  #create new user
     get "/", PageController, :index
   end
 

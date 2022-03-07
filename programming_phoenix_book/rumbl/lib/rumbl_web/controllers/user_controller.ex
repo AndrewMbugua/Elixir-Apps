@@ -6,11 +6,28 @@ alias Rumbl.Accounts.User
 
 #a new user account for our template
 #We use changeset to build a customizable strategy
+defp authenticate(conn) do
+    if conn.assigns.current_user do
+        conn
+    else
+    conn
+    |> put_flash(:error, "You must be logged in to access that page")
+    |> redirect(to: Routes.page_path(conn, :index))
+    |> halt()
+
+    end
+end
 
 def index(conn, _params) do
-users = Accounts.list_users()
-render(conn, "index.html", users: users)
-end
+    case authenticate(conn) do
+        %Plug.Conn{halted: true} = conn ->
+            conn
+
+            conn ->
+                users = Accounts.list_users()
+                render(conn, "index.html", users: users)
+            end
+        end
 
 # displays users by id
 def show(conn, %{"id" => id}) do
@@ -35,4 +52,8 @@ def create(conn, %{"user" => user_params}) do
         render(conn, "new.html", changeset: changeset)
 end
 end
+
+
+
+
 end

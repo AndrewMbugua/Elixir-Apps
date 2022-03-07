@@ -3,10 +3,11 @@ use RumblWeb, :controller
 
 alias Rumbl.Accounts
 alias Rumbl.Accounts.User
+plug :authenticate when action in [:index, :show]
 
 #a new user account for our template
 #We use changeset to build a customizable strategy
-defp authenticate(conn) do
+defp authenticate(conn, _opts) do
     if conn.assigns.current_user do
         conn
     else
@@ -19,14 +20,8 @@ defp authenticate(conn) do
 end
 
 def index(conn, _params) do
-    case authenticate(conn) do
-        %Plug.Conn{halted: true} = conn ->
-            conn
-
-            conn ->
-                users = Accounts.list_users()
-                render(conn, "index.html", users: users)
-            end
+        users = Accounts.list_users()
+        render(conn, "index.html", users: users)
         end
 
 # displays users by id

@@ -1,5 +1,5 @@
 # New user controller
-defmodule TrackerWeb.NewController do
+defmodule TrackerWeb.UserController do
 use TrackerWeb, :controller
 
 def new(conn, _params) do

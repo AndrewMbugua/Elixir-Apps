@@ -1,6 +1,13 @@
 defmodule RumblWeb.Auth do
   import Plug.Conn
 
+  def login(conn, user)do
+
+    
+  end
+
+
+
   def init(opts), do: opts
 
     # checks if a :user_id is stored in the session
@@ -9,7 +16,5 @@ defmodule RumblWeb.Auth do
       user = user_id && Rumbl.Accounts.get_user(user_id)
       assign(conn, :current_user, user)
   end
-
-
 
 end

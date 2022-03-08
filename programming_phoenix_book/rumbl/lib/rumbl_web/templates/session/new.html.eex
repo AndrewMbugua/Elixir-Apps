@@ -1,7 +1,7 @@
 <h1>Login</h1>
 
 <%= form_for @conn,
-    Routes.sessions_path(@conn, :create),
+             Routes.session_path(@conn, :create),
     [as: :session],
     fn f -> %>
 

@@ -40,6 +40,7 @@ def create(conn, %{"user" => user_params}) do
     case Accounts.register_user(user_params)do
       {:ok, user} ->
     conn
+    |> RumblWeb.Auth.login(user)
     |> put_flash(:info, "#{user.name} created!") # flashes a notification when correct details are put
     |> redirect(to: Routes.user_path(conn, :index))
 

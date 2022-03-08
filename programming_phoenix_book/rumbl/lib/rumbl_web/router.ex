@@ -16,11 +16,13 @@ defmodule RumblWeb.Router do
   end
 
   scope "/", RumblWeb do
-    pipe_through :browser
+    pipe_through :browser # use the default browser stack
     get "/", PageController, :index
 
     # resources - implementation for a common set of action that define CRUD
     resources "/users", UserController, only: [:index, :show, :new, :create]
+    # adding one of the pre-packaged REST routes for /sessions
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
   # Other scopes may use custom stacks.

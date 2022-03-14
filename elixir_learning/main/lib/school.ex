@@ -1,14 +1,9 @@
 defmodule School do
-require EEx
-def module do
-
-
-  <% if true do %>
-  <%#Statement%>
-
+quote do
+  def time do
 
 
 
 end
-
+end
 end

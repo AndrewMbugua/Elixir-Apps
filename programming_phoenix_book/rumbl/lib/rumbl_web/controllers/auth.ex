@@ -12,7 +12,7 @@ defmodule RumblWeb.Auth do
      configure_session(conn, drop: true)
    end
 
-
+  
   def init(opts), do: opts
 
     # checks if a :user_id is stored in the session

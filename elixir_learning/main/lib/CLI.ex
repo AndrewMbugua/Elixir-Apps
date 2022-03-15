@@ -14,6 +14,7 @@ defp parse_args(args)do
 
   {opts, List.to_string(word)}
 end
+
 defp
 
 

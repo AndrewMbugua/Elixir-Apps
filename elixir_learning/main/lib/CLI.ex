@@ -1,4 +1,4 @@
-defmodule CLI do
+defmodule Main.CLI do
 
 def main(args \\ []) do # \\ defines a default value
 args
@@ -18,6 +18,7 @@ end
 defp response({opts,word})do
   if opts[:upcase], do: String.upcase(word),else: word
 end
+
 
 end
 

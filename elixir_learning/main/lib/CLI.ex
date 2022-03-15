@@ -7,7 +7,7 @@ args
 |> IO.puts()
 end
 
-defp parse_args()
+defp parse_args(args)
 
 
 

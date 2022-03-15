@@ -9,7 +9,8 @@ end
 
 defp parse_args(args)do
 {opts, word, _} =
-  args|>
+  args
+  |>
 
 
 

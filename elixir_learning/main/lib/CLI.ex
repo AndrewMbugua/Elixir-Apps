@@ -1,6 +1,6 @@
 defmodule Main.CLI do
 
-def main(args)
+def main(args \\ [])
 
 
 end

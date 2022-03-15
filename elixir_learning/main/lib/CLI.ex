@@ -16,7 +16,7 @@ defp parse_args(args)do
 end
 
 defp response({opts,word})do
-  if opts
+  if opts[:up]
 end
 
 

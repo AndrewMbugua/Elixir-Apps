@@ -1,6 +1,6 @@
 defmodule Main.CLI do
 
-de
+def mai
 
 
 end

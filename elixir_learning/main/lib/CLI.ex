@@ -10,7 +10,7 @@ end
 defp parse_args(args)do
 {opts, word, _} =
   args
-  |> OptionParser.parse
+  |> OptionParser.parse(switches: )
 
 
 

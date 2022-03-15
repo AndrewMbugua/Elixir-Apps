@@ -6,9 +6,14 @@ defmodule Main.MixProject do
       app: :main,
       version: "0.1.0",
       elixir: "~> 1.10",
+      escript: escript(),
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
+  end
+
+  defp escript do
+    [main_module: Main.CLI]
   end
 
   # Run "mix help compile.app" to learn about applications.

@@ -15,7 +15,9 @@ defp parse_args(args)do
   {opts, List.to_string(word)}
 end
 
-defp response({opts,word})
+defp response({opts,word})do
+  if
+end
 
 
 

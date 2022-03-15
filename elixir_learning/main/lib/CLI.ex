@@ -8,7 +8,7 @@ args
 end
 
 defp parse_args(args)do
-{opts, word}
+{opts, word, _}
 
 
 

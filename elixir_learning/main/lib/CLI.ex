@@ -13,7 +13,7 @@ defp parse_args(args)do
   |> OptionParser.parse(switches: [upcase: :boolean])
 
   {opts, List.to_string(word)}
-
+end
 
 
 

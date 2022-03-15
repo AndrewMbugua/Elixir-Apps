@@ -1,4 +1,4 @@
-defmodule Main.CLI do
+defmodule CLI do
 
 def main(args \\ []) do # \\ defines a default value
 args

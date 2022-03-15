@@ -16,7 +16,7 @@ defp parse_args(args)do
 end
 
 defp response({opts,word})do
-  if opts[:upper], do: String.upcase(word),else: word
+  if opts[:upcase], do: String.upcase(word),else: word
 end
 
 

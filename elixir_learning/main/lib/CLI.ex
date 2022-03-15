@@ -6,6 +6,5 @@ args
 |> parse_args()
 |> response()
 |> IO.puts()
-
 end
 end

@@ -1,6 +1,7 @@
 defmodule RumblWeb.Auth do
   import Plug.Conn
-  import Phoenix
+  import Phoenix.Controller
+  alias
   def login(conn, user)do
    conn
    |> assign(:current_user, user)

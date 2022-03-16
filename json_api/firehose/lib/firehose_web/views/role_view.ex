@@ -1,3 +1,3 @@
-defmodule Firehoeweb.RoleView do
+defmodule Firehoseweb.RoleView do
   
 end

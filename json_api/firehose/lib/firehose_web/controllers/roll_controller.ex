@@ -1,3 +1,3 @@
 defmodule FirehoseWeb.RollController do
-  use FirehoseWeb, :
+  use FirehoseWeb, :controller
 end

@@ -1,7 +1,7 @@
 defmodule FirehoseWeb.RollController do
   use FirehoseWeb, :controller
 
-  def 
+  def index(conn,_params)
 
 
 

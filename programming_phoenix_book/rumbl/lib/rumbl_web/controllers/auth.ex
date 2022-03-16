@@ -3,7 +3,7 @@ defmodule RumblWeb.Auth do
   import Phoenix.Controller
   alias RumblWeb.Router.Helpers, as: Routes
 
-  def authenticate(conn, _opts) do
+  def authenticate_user(conn, _opts) do
     if conn.assigns.current_user do
         conn
     else

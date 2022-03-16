@@ -1,3 +1,3 @@
-defmodule RoleView do
+defmodule FireRoleView do
   
 end

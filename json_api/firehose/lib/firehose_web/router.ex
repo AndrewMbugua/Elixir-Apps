@@ -24,7 +24,7 @@ defmodule FirehoseWeb.Router do
    scope "/api", FirehoseWeb do
      pipe_through :api
 
-     get "roll"
+     get "/roll"
    end
 
   # Enables LiveDashboard only for development

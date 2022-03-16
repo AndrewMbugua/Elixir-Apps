@@ -1,1 +1,1 @@
-defmodule Fire
+defmodule FirehoseWeb

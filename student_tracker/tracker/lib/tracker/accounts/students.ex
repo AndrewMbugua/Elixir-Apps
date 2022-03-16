@@ -18,6 +18,13 @@ def changeset(students, params) do
    |> validate_required([:full_name, :admission_number, :date_of_joining])
 end
 
+def registration_changeset(students, params) do
+  students
+  |> changeset(params)
+  |> cast(params, [:full_name, :admission_number, :date_of_joining])
+  |> validate_required([:full_name, :admission_number, :date_of_joining])
+
+end
 
 
 

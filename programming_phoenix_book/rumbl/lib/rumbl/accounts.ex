@@ -1,5 +1,5 @@
 defmodule Rumbl.Accounts do
-# Accounts context - Groups together related functions
+# Accounts context - Groups together related function
 # Now we change our accounts context to an Ecto instance
 
 alias Rumbl.Accounts.User

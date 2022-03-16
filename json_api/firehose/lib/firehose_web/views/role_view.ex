@@ -2,7 +2,7 @@
 defmodule FirehoseWeb.RoleView do
 use FirehoseWeb, :view
 
-def render("index.json", %{})
+def render("index.json", %{roll: num})
 
 
 end

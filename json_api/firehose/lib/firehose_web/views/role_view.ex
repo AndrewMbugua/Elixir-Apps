@@ -6,6 +6,6 @@ def render("index.json", %{roll: num}) when is_integer(num) do
   %{status: "Ok", roll: num}
 end
 
-def render("index.json",_)
+def render("index.json",_),
 
 end

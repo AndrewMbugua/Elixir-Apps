@@ -1,3 +1,3 @@
-defmodule Role do
+defmodule RoleView do
   
 end

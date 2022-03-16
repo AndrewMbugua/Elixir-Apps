@@ -3,7 +3,7 @@ use RumblWeb, :controller
 
 alias Rumbl.Accounts
 alias Rumbl.Accounts.User
-plug :authenticate when action in [:index, :show]
+plug :authenticate_user when action in [:index, :show]
 
 #a new user account for our template
 #We use changeset to build a customizable strategy

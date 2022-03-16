@@ -1,3 +1,3 @@
 defmodule FirehoseWeb.RoleView do
-use FirehoseWeb, :view
+use FirehoseWeb, :view 
 end

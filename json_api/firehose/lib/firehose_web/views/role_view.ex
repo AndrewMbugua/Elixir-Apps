@@ -1,3 +1,3 @@
-defmodule  do
+defmodule Role do
   
 end

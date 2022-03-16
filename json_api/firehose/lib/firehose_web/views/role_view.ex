@@ -3,7 +3,7 @@ defmodule FirehoseWeb.RoleView do
 use FirehoseWeb, :view
 
 def render("index.json", %{roll: num}) when is_integer(num) do
-  %{status: "Ok"}
+  %{status: "Ok", roll: num}
 end
 
 

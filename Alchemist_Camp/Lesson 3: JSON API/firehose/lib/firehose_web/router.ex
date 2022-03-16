@@ -22,7 +22,7 @@ defmodule FirehoseWeb.Router do
 
   # Other scopes may use custom stacks.
    scope "/api", FirehoseWeb do
-     pipe_through :api
+     pipe_through :api 
 
      get "/roll", RollController, :index
    end

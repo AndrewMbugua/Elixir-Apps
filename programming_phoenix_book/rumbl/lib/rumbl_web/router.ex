@@ -23,6 +23,7 @@ defmodule RumblWeb.Router do
     resources "/users", UserController, only: [:index, :show, :new, :create]
     # adding one of the pre-packaged REST routes for /sessions
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    # viv
   end
 
   # Other scopes may use custom stacks.

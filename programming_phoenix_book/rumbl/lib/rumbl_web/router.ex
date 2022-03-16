@@ -14,9 +14,9 @@ defmodule RumblWeb.Router do
   pipeline :api do
     plug :accepts, ["json"]
   end
-  
+
   scope "/manage", RumblWeb do
-    pipe_through [:browser, :authentiacate_user]
+    pipe_through [:browser, :authenticate_user]
     resources "/videos", VideoController
   end
 

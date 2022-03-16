@@ -15,7 +15,6 @@ defp authenticate(conn, _opts) do
     |> put_flash(:error, "You must be logged in to access that page")
     |> redirect(to: Routes.page_path(conn, :index))
     |> halt()
-
     end
 end
 

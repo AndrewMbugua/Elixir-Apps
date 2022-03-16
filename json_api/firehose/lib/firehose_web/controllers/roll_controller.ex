@@ -3,7 +3,7 @@ defmodule FirehoseWeb.RollController do
 
   def index(conn,_params) do
     num = :rand.uniform(6)
-    render(conn, "index.json")
+    render(conn, "index.json",roll)
   end
 
 

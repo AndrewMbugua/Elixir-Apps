@@ -2,7 +2,7 @@
 defmodule FirehoseWeb.RoleView do
 use FirehoseWeb, :view
 
-def render
+def render("index")
 
 
 end

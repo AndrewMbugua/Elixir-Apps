@@ -1,5 +1,5 @@
 defmodule Main do
-
+#its safer to allow the supervisor to do the job for you
 def error_handling_1 do
 
   try do
@@ -12,19 +12,14 @@ def error_handling_1 do
   end
 end
 
-def error_handling_2 do
- try do
- for x <- 0..10 do
+def odd_count(n) do
 
+  numbers = 1..n
+  Enum.to_list(numbers)
+  |> Enum.filter(fn n -> rem(n,2) != 1 end)
+  |> Enum.count()
 
-
-
- end
- end
-
-
-end
-
+  end
 
 
  end

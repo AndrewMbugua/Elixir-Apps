@@ -6,12 +6,12 @@ alias Tracker.Accounts.Students
 
 def new(conn, params) do
   add_student = Accounts.add_student_data(params)
-
   render(conn, "new.html", add_student: add_student)
 end
 
-def create()do
-  
-end
+
+
+
+
 
 end

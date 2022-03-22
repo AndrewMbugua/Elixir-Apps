@@ -30,7 +30,7 @@ defmodule Metex.Worker do
    :error
  end
 
-
+ #computer temperature
  defp computer_temperature(json)do
    try do
      temp = (json["main"]["temp"] - 273.15)

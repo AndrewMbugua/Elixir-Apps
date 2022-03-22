@@ -1,6 +1,4 @@
 <h1><center>Input your details</center></h1>
-<%= form_for @add_student, Routes.user_path(@conn, :create) %>
-
 
 <label for="fname">Full names:</label>
   <input type="text" id="fullnames" name="fullnames"><br><br>

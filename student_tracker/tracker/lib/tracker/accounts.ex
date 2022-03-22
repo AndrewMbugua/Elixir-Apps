@@ -3,12 +3,11 @@ defmodule Tracker.Accounts do
 alias Tracker.Accounts.Students
 alias Tracker.Repo
 
-
 # Submits student's data to the database
 def add_student_data(attrs \\ %{}) do
 
   %Students{}
-  |> Students.registration_changeset(attrs)
+  |> Students.changeset(attrs)
   |> Repo.insert()
 
 end

@@ -1,1 +1,1 @@
-defmodule PentoWeb
+defmodule PentoWeb.Wrong

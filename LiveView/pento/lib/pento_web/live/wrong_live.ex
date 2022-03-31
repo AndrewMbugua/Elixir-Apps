@@ -12,7 +12,8 @@ end
 def render(assigns) do
 ~L"""
 <h1> Your Score: <%= @score %></h1>
-
+<h2>
+<%= @me
 
 
 

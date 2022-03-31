@@ -1,3 +1,3 @@
 defmodule PentoWeb.WrongLive do
-  use
+  use Pento
 end

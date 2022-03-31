@@ -18,7 +18,7 @@ defmodule PentoWeb.Router do
     pipe_through :browser
 
     live "/" PageLive, :index
-    live "/guess"
+    live "/guess", WrongLive
     get "/", PageController, :index
   end
 

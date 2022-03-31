@@ -14,6 +14,8 @@ def render(assigns) do
 <h1> Your Score: <%= @score %></h1>
 <h2>
 <%= @message %>
+</h2>
+<h
 
 
 

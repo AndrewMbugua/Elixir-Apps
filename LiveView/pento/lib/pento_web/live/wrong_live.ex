@@ -1,3 +1,8 @@
 defmodule PentoWeb.WrongLive do
-  use PentoWeb, :li
+  use PentoWeb, :live_view
+
+
+  
+
+
 end

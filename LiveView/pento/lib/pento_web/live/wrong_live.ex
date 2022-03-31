@@ -15,7 +15,8 @@ def render(assigns) do
 <h2>
 <%= @message %>
 </h2>
-<h
+<h2>
+<%=
 
 
 

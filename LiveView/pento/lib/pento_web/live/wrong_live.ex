@@ -17,7 +17,6 @@ def render(assigns) do
 </h2>
 <h2>
 <%= for n <- 1..10 do %>
-<a href="#" phx-click="guess" phx-value-number = "<%= n %>"><%= n %></a>
 <% end %>
 </h2>
 

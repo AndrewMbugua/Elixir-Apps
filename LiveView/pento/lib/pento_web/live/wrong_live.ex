@@ -1,3 +1,3 @@
 defmodule PentoWeb.WrongLive do
-  use Pento
+  use PentoWeb, :live
 end

@@ -21,7 +21,7 @@ def render(assigns) do
 <% end %>
 </h2>
 
-"""
+""
 
 end
 

@@ -7,7 +7,7 @@ def mount(_params,_session, socket) do
   assign(socket, score: 0, message: "Guess a number.")
 
 }
-
+end
 
 
 end

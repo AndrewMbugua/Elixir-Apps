@@ -22,7 +22,6 @@ def render(assigns) do
 </h2>
 
 """
-
 end
 
 

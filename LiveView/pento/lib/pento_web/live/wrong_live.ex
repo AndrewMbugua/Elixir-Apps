@@ -24,8 +24,8 @@ def render(assigns) do
 """
 end
 
-def handle_event("guess", %{"number" => guess} = data, socket) do
-    
+def handle_event("guess", data = %{"number" => guess}, socket) do
+
 
 
 end

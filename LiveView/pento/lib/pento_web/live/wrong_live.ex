@@ -4,8 +4,7 @@ defmodule PentoWeb.WrongLive do
 def mount(_params,_session, socket) do
 {
   :ok,
-  assign(socket, score: 1, message: "Guess a number."),
-  time()
+  assign(socket, score: 1, message: "Guess a number.")
 
 }
 end

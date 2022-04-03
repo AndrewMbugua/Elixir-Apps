@@ -26,7 +26,8 @@ end
 
 def handle_event("guess", data = %{"number" => guess}, socket) do
    IO.inspect data
-   message = "Your guess: #{guess}"
+   message = "Your guess: #{guess}, Wrong. Guess again."
+   score = 
 
 
 end

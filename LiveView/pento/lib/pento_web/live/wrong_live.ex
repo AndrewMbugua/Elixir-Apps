@@ -25,7 +25,7 @@ def render(assigns) do
 end
 
 def handle_event("guess", data = %{"number" => guess}, socket) do
-  
+   IO.inspect data
 
 
 end

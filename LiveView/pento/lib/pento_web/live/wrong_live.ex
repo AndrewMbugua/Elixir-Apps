@@ -29,7 +29,11 @@ def handle_event("guess", data = %{"number" => guess}, socket) do
    message = "Your guess: #{guess}, Wrong. Guess again."
    score = socket.assigns.score - 1
 
-   
+  {
+
+
+
+  }
 
 
 end

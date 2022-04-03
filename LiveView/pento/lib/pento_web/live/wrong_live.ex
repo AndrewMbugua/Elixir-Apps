@@ -31,8 +31,7 @@ def handle_event("guess", data = %{"number" => guess}, socket) do
 
   {
    :noreply,
-   assign(socket,message: message,score: score)
-
+   assign(socket,message: message,score: score
 
   }
 

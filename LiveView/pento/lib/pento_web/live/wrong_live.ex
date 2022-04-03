@@ -24,8 +24,8 @@ def render(assigns) do
 """
 end
 
-def handle_event(event, unsigned_params, socket) do
-  
+def handle_event("guess", unsigned_params, socket) do
+
 end
 
 

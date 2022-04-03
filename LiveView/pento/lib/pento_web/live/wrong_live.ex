@@ -14,7 +14,7 @@ def render(assigns) do
 <h1> Your Score: <%= @score %></h1>
 <h2>
 <%= @message %>
-Its;
+It's time()
 </h2>
 <h2>
 <%= for n <- 1..10 do %>

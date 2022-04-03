@@ -26,7 +26,8 @@ It's <%= time() %>
 end
 
 def time() do
-  
+  DateTime.utc_now
+  |>
 end
 
 def handle_event("guess", data = %{"number" => guess}, socket) do

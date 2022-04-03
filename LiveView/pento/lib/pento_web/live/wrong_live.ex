@@ -25,6 +25,7 @@ It's <%= time() %>
 """
 end
 
+def time
 
 def handle_event("guess", data = %{"number" => guess}, socket) do
    IO.inspect data

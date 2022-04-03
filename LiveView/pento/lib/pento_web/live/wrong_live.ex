@@ -5,7 +5,7 @@ def mount(_params,_session, socket) do
 {
   :ok,
   assign(socket, score: 1, message: "Guess a number.")
-  
+
 }
 end
 
@@ -24,7 +24,9 @@ def render(assigns) do
 """
 end
 
-
+def handle_event(event, unsigned_params, socket) do
+  
+end
 
 
 

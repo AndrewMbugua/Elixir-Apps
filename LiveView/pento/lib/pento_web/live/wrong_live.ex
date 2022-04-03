@@ -27,7 +27,7 @@ end
 def handle_event("guess", data = %{"number" => guess}, socket) do
    IO.inspect data
    message = "Your guess: #{guess}, Wrong. Guess again."
-   score = socket.assign.score - 1
+   score = socket.assigns.score - 1
 
   {
    :noreply,

@@ -25,7 +25,7 @@ It's <%= time() %>
 """
 end
 
-def time() do
+def time do
   DateTime.utc_now
   |> to_string()
 end

@@ -24,7 +24,7 @@ def render(assigns) do
 """
 end
 
-def handle_event("gues", data = %{"number" => guess}, socket) do
+def handle_event("guess", data = %{"number" => guess}, socket) do
    IO.inspect data
    message = "Your guess: #{guess}, Wrong. Guess again."
    score = socket.assigns.score - 1

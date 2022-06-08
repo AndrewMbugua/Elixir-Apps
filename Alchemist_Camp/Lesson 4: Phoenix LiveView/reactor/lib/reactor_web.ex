@@ -1,12 +1,12 @@
-defmodule PentoWeb do
+defmodule ReactorWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PentoWeb, :controller
-      use PentoWeb, :view
+      use ReactorWeb, :controller
+      use ReactorWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule PentoWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PentoWeb
-
+      use Phoenix.Controller, namespace: ReactorWeb
+      import Phoenix.LiveView.Controller
       import Plug.Conn
-      import PentoWeb.Gettext
-      alias PentoWeb.Router.Helpers, as: Routes
+      import ReactorWeb.Gettext
+      alias ReactorWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/pento_web/templates",
-        namespace: PentoWeb
+        root: "lib/reactor_web/templates",
+        namespace: ReactorWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -39,13 +39,24 @@ defmodule PentoWeb do
 
       # Include shared imports and aliases for views
       unquote(view_helpers())
-    end
+      import Phoenix.LiveView, only: [
+      live_render: 2,
+      live_render: 3,
+      live_link:  1,
+      live_link:  2,
+      live_component: 2,
+      live_component: 3,
+      live_component: 4
+
+ ]
+
+ end
   end
 
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {PentoWeb.LayoutView, "live.html"}
+        layout: {ReactorWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -70,17 +81,17 @@ defmodule PentoWeb do
   def router do
     quote do
       use Phoenix.Router
-
       import Plug.Conn
       import Phoenix.Controller
       import Phoenix.LiveView.Router
-    end
+      import Phoenix.LiveView.Router
+ end
   end
 
   def channel do
     quote do
       use Phoenix.Channel
-      import PentoWeb.Gettext
+      import ReactorWeb.Gettext
     end
   end
 
@@ -95,9 +106,9 @@ defmodule PentoWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import PentoWeb.ErrorHelpers
-      import PentoWeb.Gettext
-      alias PentoWeb.Router.Helpers, as: Routes
+      import ReactorWeb.ErrorHelpers
+      import ReactorWeb.Gettext
+      alias ReactorWeb.Router.Helpers, as: Routes
     end
   end
 

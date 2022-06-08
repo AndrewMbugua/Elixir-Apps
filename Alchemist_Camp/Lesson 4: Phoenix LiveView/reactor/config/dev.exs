@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :pento, Pento.Repo,
+config :reactor, Reactor.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "pento_dev",
+  database: "reactor_dev",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -15,14 +15,14 @@ config :pento, Pento.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :pento, PentoWeb.Endpoint,
+config :reactor, ReactorWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "8pwPK75Fr+q6y5nyRl/hodM+h45OrkRLqbTX46T4hlLuA1yURcMXN7ctMtp4pug0",
+  secret_key_base: "Gqtj8dqvN4f9hde6jQ1A26F1kh2FTm07wE6tnhIus5wSw/gRoL+QnIP7dT1u1aaa",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
@@ -53,13 +53,13 @@ config :pento, PentoWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :pento, PentoWeb.Endpoint,
+config :reactor, ReactorWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/pento_web/(live|views)/.*(ex)$",
-      ~r"lib/pento_web/templates/.*(eex)$"
+      ~r"lib/reactor_web/(live|views)/.*(ex)$",
+      ~r"lib/reactor_web/templates/.*(eex)$"
     ]
   ]
 

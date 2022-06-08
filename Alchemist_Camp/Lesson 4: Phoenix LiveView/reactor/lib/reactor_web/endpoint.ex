@@ -1,13 +1,13 @@
-defmodule PentoWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :pento
+defmodule ReactorWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :reactor
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_pento_key",
-    signing_salt: "HsiYcZR4"
+    key: "_reactor_key",
+    signing_salt: "bDN3PRtc"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
@@ -18,7 +18,7 @@ defmodule PentoWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :pento,
+    from: :reactor,
     gzip: false,
     only: ~w(assets fonts images favicon.ico robots.txt)
 
@@ -28,7 +28,7 @@ defmodule PentoWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :pento
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :reactor
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -46,5 +46,5 @@ defmodule PentoWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug PentoWeb.Router
+  plug ReactorWeb.Router
 end

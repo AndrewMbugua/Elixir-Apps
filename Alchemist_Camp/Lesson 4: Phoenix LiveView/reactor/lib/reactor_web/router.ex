@@ -1,28 +1,30 @@
-defmodule PentoWeb.Router do
-  use PentoWeb, :router
+defmodule ReactorWeb.Router do
+  use ReactorWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {PentoWeb.LayoutView, :root}
+    plug :put_root_layout, {ReactorWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-  end
+    plug Phoenix.LiveView.Flash
+
+ end
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", PentoWeb do
+  scope "/", ReactorWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
-    live "/guess", WrongLive
+    get "/", PageController, :index
+    live "/foo", FooLive # A throwaway route
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PentoWeb do
+  # scope "/api", ReactorWeb do
   #   pipe_through :api
   # end
 
@@ -39,7 +41,7 @@ defmodule PentoWeb.Router do
     scope "/" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: PentoWeb.Telemetry
+      live_dashboard "/dashboard", metrics: ReactorWeb.Telemetry
     end
   end
 
